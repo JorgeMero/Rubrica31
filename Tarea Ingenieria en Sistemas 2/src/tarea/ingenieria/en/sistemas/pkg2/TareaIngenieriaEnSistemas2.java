@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * Descripción: Mostrar un menù con las operaciones Matemàticas; Suma y Resta al Usuario 
+ * Descripción: Mostrar un menù con 3 operaciones Matemàticas; Suma, Resta y Mùltiplicaciòn al Usuario 
  *  y que le permita al usuario escojer la opcion que desee tendras la opcion de seguir o no 
  * @author Jorge Mero
  */
@@ -21,7 +21,7 @@ public class TareaIngenieriaEnSistemas2 {
     public static void main(String[] args) {
         
         Scanner mientrada=new Scanner(System.in); 
-        String clave="1311229810",usuario="JORGE";
+        String clave="1311228910",usuario="JORGE";
         String miclave="",miusuario="";
         int contador=0,bandera=0;
         String sigue="", resp="S";
@@ -55,7 +55,8 @@ public class TareaIngenieriaEnSistemas2 {
                 System.out.println("♦♦CALCULADORA BASICA♦♦");
                 System.out.println("♦♦ 1.- SUMAR ♦♦");
                 System.out.println("♦♦ 2.- RESTAR ♦♦");
-                System.out.println("Elija 1 de las 2 opciones");
+                System.out.println("♦♦ 3.- MULTIPLICAR ♦♦");
+                System.out.println("Elija 1 de las 3 opciones");
                 opcion=mientrada.nextInt();
                 System.out.println("Ingrese primer valor ==> ");
                 valor1=mientrada.nextInt();
@@ -74,7 +75,14 @@ public class TareaIngenieriaEnSistemas2 {
                   System.out.println("");
                   System.out.println("Desea continuar S/N");
                   sigue=mientrada.nextLine();
-                  }
+                }
+                if (opcion==3){
+                  producto=(int)(valor1*valor2);
+                  System.out.printf("La multiplicación de %d por %d es igual a %d ",valor1, valor2, producto);
+                  System.out.println("");
+                  System.out.println("Desea continuar S/N");
+                  sigue=mientrada.nextLine();
+                }
                 sigue=mientrada.nextLine();
             }while(resp.equals(sigue));
         }
